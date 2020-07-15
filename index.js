@@ -41,16 +41,18 @@ function reduceToAllTrue(sourceArray) {
   let all_true = true
   for(const elem of sourceArray) {
     // if any elem is false, set all true to false
-    all_true = elem ? all_true : false
+    if(!elem) {
+      return false
+    }
   }
-  return all_true
+  return true
 }
 
 function reduceToAnyTrue(sourceArray) {
-  let any_true = false
   for(const elem of sourceArray) {
-    // if any elem is true, set anytrue to true
-    any_true = elem ? true : any_true
+    if(elem) {
+      return true
+    }
   }
-  return any_true
+  return false
 }
