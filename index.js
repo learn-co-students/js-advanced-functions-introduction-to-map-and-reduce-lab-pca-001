@@ -7,6 +7,7 @@ function mapToNegativize(sourceArray) {
   }
   return result
 }
+
 function mapToNoChange(sourceArray) {
   let result = []
   for(const element of sourceArray) {
@@ -14,6 +15,7 @@ function mapToNoChange(sourceArray) {
   }
   return result
 }
+
 function mapToDouble(sourceArray) {
   let result = []
   for(const element of sourceArray) {
@@ -21,10 +23,11 @@ function mapToDouble(sourceArray) {
   }
   return result
 }
+
 function mapToSquare(sourceArray) {
   let result = []
   for(const element of sourceArray) {
-    result.push(element * element)
+    result.push(element ** 2)
   }
   return result
 }
